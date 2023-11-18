@@ -1,0 +1,51 @@
+$main-color: #39a7ff;
+$grass: #a8df8e;
+$box-one: #f6fa70;
+$box-two: #ef6262;
+
+.body {
+	background-color: $main-color;
+	width: 100vw; /* Adjust width as needed */
+	height: 100vh;
+	display: flex;
+	justify-content: center; /* Horizontally center */
+	align-items: center; /* Vertically center */
+	position: relative;
+}
+
+.grass {
+	background-color: $grass;
+	background-repeat: no-repeat;
+	height: 20%;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+}
+
+.box {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 10%;
+}
+
+.boxOne {
+	background-color: $box-one;
+	width: 70px;
+	height: 70px;
+	margin-right: 20px;
+	border-radius: 10%;
+}
+
+.textBox {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%; /* Ensure the text is centered vertically */
+	font-size: 24px;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+}
