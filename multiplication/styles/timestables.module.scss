@@ -1,16 +1,16 @@
-$main-color: #39a7ff;
+$main-color: #0174be;
 $grass: #a8df8e;
-$box-one: #f6fa70;
-$box-two: #ef6262;
-$question-color: #c70a80;
+$box-one: #3c486b;
+$box-two: #3c486b;
+$question-color: #525fe1;
 
 .body {
-	background-color: $main-color;
-	width: 100vw; /* Adjust width as needed */
+	background-color: white;
 	height: 100vh;
 	display: flex;
-	justify-content: center; /* Horizontally center */
-	align-items: center; /* Vertically center */
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 	position: relative;
 }
 
@@ -34,7 +34,9 @@ $question-color: #c70a80;
 	width: 70px;
 	height: 70px;
 	margin-right: 20px;
-	border-radius: 10%;
+	border-radius: 10px;
+	border-color: #f0f0f0;
+	border: 1px solid;
 }
 
 .textBox {
@@ -44,6 +46,7 @@ $question-color: #c70a80;
 	align-items: center;
 	height: 100%;
 	font-size: 24px;
+	color: #f0f0f0;
 }
 
 .container {
@@ -63,13 +66,14 @@ $question-color: #c70a80;
 	height: 100px;
 	margin-left: 10px;
 	border-radius: 20%;
-	border-color: black;
+	border-color: white;
 	border: 1px solid;
 }
 
 .questionTextBox {
 	@extend .textBox;
 	font-size: 30px;
+	color: black;
 }
 
 .times {
@@ -84,12 +88,15 @@ $question-color: #c70a80;
 	font-size: 18px;
 	width: 100px;
 	box-sizing: border-box;
+	border-color: black;
+	border: 1px solid;
 }
 
 .buttonContainer {
 	display: flex;
 	justify-content: center;
 	flex-direction: row;
+	margin-top: 20px;
 }
 .submitButton {
 	@extend .boxOne;
@@ -99,4 +106,85 @@ $question-color: #c70a80;
 	width: 70px;
 	height: 40px;
 	margin-top: 10px;
+	border-radius: 10px;
+	color: white;
+}
+
+.paragraph {
+	margin-bottom: 10px;
+	font-size: 20px;
+	font-weight: bold;
+	color: white;
+}
+.pContainer {
+	transform: translateY(-90px);
+}
+
+.soccerBallContainer {
+	display: flex;
+	justify-content: center;
+	margin-top: 30px;
+}
+
+.soccerBall {
+	background-image: url("../public/sports-balls-svgrepo-com.svg");
+	background-repeat: no-repeat;
+	width: 100px;
+	height: 100px;
+	margin-bottom: 20px;
+}
+.numberContainer {
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+}
+
+.questionContainer {
+	margin-top: 100px;
+}
+
+.number {
+	background-image: url("../public/one-square-svgrepo-com.svg");
+	background-repeat: no-repeat;
+	width: 50px;
+	height: 50px;
+}
+
+.two {
+	@extend .number;
+	background-image: url("../public/two-square-svgrepo-com.svg");
+}
+
+.three {
+	@extend .number;
+	background-image: url("../public/three-square-svgrepo-com.svg");
+}
+@media screen and (max-width: 600px) {
+	.pContainer {
+		transform: translateY(0);
+		text-align: center;
+		position: absolute;
+		top: 20px;
+		width: 100%;
+		background-color: $main-color;
+		padding: 10px;
+	}
+
+	.paragraph {
+		font-size: 16px; /* Reduce font size for smaller screens */
+		font-weight: normal; /* Normal weight for readability */
+	}
+
+	.box {
+		margin-top: 100px;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.boxOne {
+		margin-right: 10px;
+		margin-bottom: 10px;
+		width: calc(50% - 15px);
+		max-width: 150px;
+	}
 }
