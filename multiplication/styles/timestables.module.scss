@@ -2,6 +2,7 @@ $main-color: #39a7ff;
 $grass: #a8df8e;
 $box-one: #f6fa70;
 $box-two: #ef6262;
+$question-color: #c70a80;
 
 .body {
 	background-color: $main-color;
@@ -41,11 +42,61 @@ $box-two: #ef6262;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	height: 100%; /* Ensure the text is centered vertically */
+	height: 100%;
 	font-size: 24px;
 }
 
 .container {
 	display: flex;
 	flex-direction: column;
+}
+
+.questionsContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.questionButton {
+	background-color: $question-color;
+	width: 100px;
+	height: 100px;
+	margin-left: 10px;
+	border-radius: 20%;
+	border-color: black;
+	border: 1px solid;
+}
+
+.questionTextBox {
+	@extend .textBox;
+	font-size: 30px;
+}
+
+.times {
+	margin-left: 10px;
+}
+
+.inputBox {
+	border-radius: 10%;
+	outline: none;
+	border: none;
+	text-align: center;
+	font-size: 18px;
+	width: 100px;
+	box-sizing: border-box;
+}
+
+.buttonContainer {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+}
+.submitButton {
+	@extend .boxOne;
+	background-color: $box-two;
+	border: none;
+	outline: none;
+	width: 70px;
+	height: 40px;
+	margin-top: 10px;
 }
